@@ -51,7 +51,7 @@ References for building Android :
 
 - Add the `platform-tools` (platform-tools_r30.0.3-windows/platform-tools) to your `PATH` environment variable and ensure that the `adb` and `fastboot` commands  can be executed successfully.
 
-  <img src="E:\CuPerFuzzer\adb.JPG" style="zoom:100%;" />	
+  <img src="https://github.com/little-leiry/CuPerFuzzer/blob/f8d909cc3bbded9eddb31c7c924db4118647e07f/adb.JPG" style="zoom:100%;" />	
 
   <img src="E:\CuPerFuzzer\fastboot.JPG" style="zoom:100%;" />	
 
