@@ -565,32 +565,3 @@ def fuzzingUpgrade2():
         print('Reset is complete!')
 
 fuzzingUpgrade2()
-
-def test():
-    start=datetime.now()
-    device_id='FA7B91A04835'
-    valid_case_num = 0
-    #op_seq = ['1', '1', '3']
-    op_seq=['1','3','4','1','2','4']
-    # install_apk_comb = ['TEST-normal-CALENDAR.apk', 'TEST-signature-ACTIVITY_RECOGNITION.apk', 'TEST-dangerous-CONTACTS.apk', 'NULL-NULL-NULL.apk']
-    #install_apk_comb = ['TEST-normal-NULL.apk', 'TEST-dangerous-' + group + '.apk']
-    install_apk_comb = ['MANAGE_APPOPS-normal-CALENDAR.apk','MANAGE_APPOPS-signature-PHONE.apk']
-    valid_case_num = oneTestUpgrade2(op_seq, install_apk_comb, device_id, valid_case_num)
-    print('valid_case_num:', valid_case_num)
-    re_reset = downgrade(device_id)
-    if re_reset == -1:
-        # the first downgrade failed, wait 2s
-        time.sleep(2)
-        while True:  # repeat until reset successful
-            re_con = testConnection(device_id)
-            print("Connection status:", re_con)
-            if re_con == 0:  # device not enter the fastboot mode
-                print('Device is on...')
-                re_reset = downgrade(device_id)  # fastboot reset
-            else:  # device has entered the fastboot mode
-                print("Has been in fastboot mode...")
-                re_reset = flash_fastboot(device_id)  # fastboot erase data
-            if re_reset != -1:
-                break
-    en=input('>')
-#test()
