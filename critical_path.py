@@ -602,26 +602,4 @@ def main():
     print('++++++++++++++++++++++++++++++++++++++++++++++++')
     print('Done.')
 
-#main()
-
-def test():
-    file_name = 'effective_case_1.csv'
-    cases = getEffectiveCases(file_name)
-    print(cases)
-    cases = sorted(cases, key=itemgetter(1), reverse=False)
-    print(cases)
-    while len(cases) != 0:
-        candidate_cases = candidateCases(cases)
-        print(candidate_cases)
-        candidate_case = random.choice(candidate_cases)
-        print(candidate_case)
-        cases.remove(candidate_case)
-
-#test()
-
-def test1():
-    op_seq = ['1','2']
-    critical_path = ['1', '3', '1']
-    #print(isDuplicated(critical_path, op_seq))
-    print(isMeaningfulCase(op_seq, "single-app"))
-#test1()
+main()
