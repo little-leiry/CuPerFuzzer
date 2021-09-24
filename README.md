@@ -51,13 +51,15 @@ References for building Android :
 
 - Add the `platform-tools` (platform-tools_r30.0.3-windows/platform-tools) to your `PATH` environment variable and ensure that the `adb` and `fastboot` commands  can be executed successfully.
 
-  <img src="https://github.com/little-leiry/CuPerFuzzer/blob/f8d909cc3bbded9eddb31c7c924db4118647e07f/adb.JPG" style="zoom:100%;" />	
-
-  <img src="E:\CuPerFuzzer\fastboot.JPG" style="zoom:100%;" />	
+  ![](adb.JPG)
+  
+  ![](fastboot.JPG)
 
 You can download the latest `platform-tools` for Windows, Mac, or Linux at  [https://developer.android.com/studio/releases/platform-tools](https://developer.android.com/studio/releases/platform-tools).
 
-- Install the latest `JDK` and add it to your `PATH` environment variable. Make sure that the `jarsigner` command can be executed successfully.![image-20210922191503642](C:\Users\leiry\AppData\Roaming\Typora\typora-user-images\image-20210922191503642.png)	
+- Install the latest `JDK` and add it to your `PATH` environment variable. Make sure that the `jarsigner` command can be executed successfully.
+  
+  ![](jarsigner.JPG)
 
 `JDk` download link: [Java Downloads | Oracle](https://www.oracle.com/java/technologies/downloads/)
 
@@ -69,7 +71,7 @@ You can download the latest `platform-tools` for Windows, Mac, or Linux at  [htt
 
 - Replace the value of `device_id` in these  python files with your devices' IDs. Execute `adb devices` to get them.
 
-  ![](E:\CuPerFuzzer\adb_device.JPG)	
+  ![](adb_device.JPG)	
 
 - Adjust the `reset()` function in `normal-1.py` ,  `normal-2.py`, and `critical_path.py` based on the location of the button `Erase all data` of your test phone.
 
