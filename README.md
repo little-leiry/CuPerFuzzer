@@ -65,7 +65,7 @@ You can download the latest `platform-tools` for Windows, Mac, or Linux at  [htt
 
 ------
 
-**Notes**:
+### **Notes**:
 
 - Replace the paths referred to in these python files with your own paths.
 
