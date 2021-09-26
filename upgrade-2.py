@@ -9,7 +9,7 @@ import time
 import random
 
 base_path = "E:/CuPerFuzzer/upgrade-2/"
-apk_base_path2 = "E:/CuPerFuzzer/apk-2/"
+apk_base_path2 = "E:/CuPerFuzzer/apk-2/" # test apps for the dual-app mode
 android_9_path = "C:/Users/leiry/Desktop/walleye9"
 android_10_path = "C:/Users/leiry/Desktop/walleye10"
 
