@@ -9,7 +9,7 @@ import time
 import random
 
 base_path="E:/CuPerFuzzer/normal-2/"
-apk_base_path2 = "E:/CuPerFuzzer/apk-2/"
+apk_base_path2 = "E:/CuPerFuzzer/apk-2/" # test apps for the dual-app mode
 
 ########################################
 # select a seed randomly
