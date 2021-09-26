@@ -10,7 +10,7 @@ import random
 import copy
 
 base_path = "E:/CuPerFuzzer/upgrade-1/"
-apk_base_path1 = "E:/CuPerFuzzer/apk-1/"
+apk_base_path1 = "E:/CuPerFuzzer/apk-1/" # test apps for the single-app mode
 android_9_path = "C:/Users/leiry/Desktop/walleye9"
 android_10_path = "C:/Users/leiry/Desktop/walleye10"
 
