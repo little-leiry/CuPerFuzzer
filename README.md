@@ -8,21 +8,25 @@ A black-box fuzzer to detect custom permission related privilege escalation vuln
 
 ------
 
-### **Test App Dataset**: 
+### **Test App Generation**: 
 
-- `apk-1`: test apps for the *single-app* mode (apps both declaring and requesting permissions).
-- `apk-2`: test apps for the *dual-app* mode (apps only declaring permissions).
-- `simulateclick.apk`: the app requesting permissions for the *dual-app* mode.
-- `generate_apk.py`: generate test apps.
-- `sim`: the test app template for the *single-app* mode and *dual-app* mode.
-- `declared`: the test app template for the *dual-app* mode.
+- `generate_apk.py`: build test apps.
+- `sim`: the test app template for building test apps against the *single-app* mode (i.e., apps both declaring a custom permission and requesting permissions).
+- `declared`: the test app template for building test apps against the *dual-app* mode (i.e., apps only declaring a custom permission).
+- `simulateclick.apk`: the app requesting permissions against the *dual-app* mode.
+- `declare.jks`: the certificate for signing test apps against the *dual-app* mode (key store password, key password: 123456, key alias: key0).
+- `request.jks`: the certificate for signing test apps against the *single-app* mode (key store password, key password: 123456, key alias: key00).
+
+To avoid the time cost of real-time app generation, you can generate test apps and store them in a dataset in advance.
 
 ### **Fuzzing Test**:
 
-- `normal-1.py`: generate and execute the test case **without the OS update operation** for the *single-app* mode.
-- `normal-2.py`: generate and execute the test case **without the OS update operation** for the *dual-app* mode.
-- `upgrade-1.py`: generate and execute the test case **containing the OS update operation** for the *single-app* mode.
-- `upgrade-2.py`: generate and execute the test case **containing the OS update operation** for the *dual-app* mode.
+- `normal-1.py`: generate and execute the test case **without the OS update operation** in the *single-app* mode.
+- `normal-2.py`: generate and execute the test case **without the OS update operation** in *dual-app* mode.
+- `upgrade-1.py`: generate and execute the test case **containing the OS update operation** in the *single-app* mode.
+- `upgrade-2.py`: generate and execute the test case **containing the OS update operation** in the *dual-app* mode.
+
+### **Critical Path Extraction**:
 - `critical_path.py`: extract critical paths from effective cases.
 
 ------
@@ -30,14 +34,10 @@ A black-box fuzzer to detect custom permission related privilege escalation vuln
 ### **Running Environment Setup**:
 
 - Install Python 3.8 ([https://www.python.org/](https://www.python.org/)).
-
 - According to your phone model, compile two versions of Android OS images based on the source code of AOSP Android 9 and 10. Note that you should:
-
-(1)  In `frameworks/base/packages/SettingsProvider/res/values/defaults.xml`, change the value of `def_screen_off_timeout` to **2147483646**, and change the value of `def_lockscreen_disabled` to **true**.
-
-(2) In `/build/make/core/main.mk`, change the value of `ro.adb.secure`  to **0**.
-
-(3) Build the image with the `userdebug` type option.
+  - In `frameworks/base/packages/SettingsProvider/res/values/defaults.xml`, change the value of `def_screen_off_timeout` to **2147483646**, and change the value of `def_lockscreen_disabled` to **true**.
+  - In `/build/make/core/main.mk`, change the value of `ro.adb.secure`  to **0**.
+  - Build the image with the `userdebug` type option.
 
 So that the compiled Android OS images can disable the screen lock, keep `adb` always open, and skip the `adb` authorization step.
 
