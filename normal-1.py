@@ -10,7 +10,7 @@ import random
 import copy
 
 base_path="E:/CuPerFuzzer/normal-1/"
-apk_base_path1 = "E:/CuPerFuzzer/apk-1/"
+apk_base_path1 = "E:/CuPerFuzzer/apk-1/" # test apps for the single-app mode
 
 ########################################
 # select a seed randomly
