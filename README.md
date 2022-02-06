@@ -2,9 +2,9 @@
 
 This repo is the prototype implementation for the following papers. Please read them before running this project.
 
-\[Conference Version\] Rui Li, [Wenrui Diao](https://diaowenrui.github.io/), Zhou Li, Jianqi Du, and Shanqing Guo. Android Custom Permissions Demystified: From Privilege Escalation to Design Shortcomings. The 42nd IEEE Symposium on Security and Privacy, San Francisco, CA, USA. May 23-27, 2021. \[[PDF]\](https://diaowenrui.github.io/paper/oakland21-li.pdf)
+\[Conference Version\] Rui Li, [Wenrui Diao](https://diaowenrui.github.io/), Zhou Li, Jianqi Du, and Shanqing Guo. Android Custom Permissions Demystified: From Privilege Escalation to Design Shortcomings. The 42nd IEEE Symposium on Security and Privacy, San Francisco, CA, USA. May 23-27, 2021. [\[PDF\]](https://diaowenrui.github.io/paper/oakland21-li.pdf)
 
-\[Extension Version\] Rui Li, [Wenrui Diao](https://diaowenrui.github.io/), Zhou Li, Shishuai Yang, Shuang Li, and Shanqing Guo. Android Custom Permissions Demystified: A Comprehensive Security Evaluation. IEEE Transactions on Software Engineering, 2021. \[[Link]\](https://ieeexplore.ieee.org/document/9573482)
+\[Extension Version\] Rui Li, [Wenrui Diao](https://diaowenrui.github.io/), Zhou Li, Shishuai Yang, Shuang Li, and Shanqing Guo. Android Custom Permissions Demystified: A Comprehensive Security Evaluation. IEEE Transactions on Software Engineering, 2021. [\[Link\]](https://ieeexplore.ieee.org/document/9573482)
 
 ------
 
