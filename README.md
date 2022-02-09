@@ -19,8 +19,8 @@ A black-box fuzzer to detect custom permission related privilege escalation vuln
 ### **Test App Generation**: 
 
 - `generate_apk.py`: build test apps.
-- `sim`: the test app template for building test apps against the *single-app* mode (i.e., apps both declaring a custom permission and requesting permissions).
-- `declared`: the test app template for building test apps against the *dual-app* mode (i.e., apps only declaring a custom permission).
+- `sim.zip`: the test app template for building test apps against the *single-app* mode (i.e., apps both declaring a custom permission and requesting permissions).
+- `declared.zip`: the test app template for building test apps against the *dual-app* mode (i.e., apps only declaring a custom permission).
 - `simulateclick.apk`: the app requesting permissions against the *dual-app* mode.
 - `declare.jks`: the certificate for signing test apps against the *dual-app* mode (key store password, key password: 123456, key alias: key0).
 - `request.jks`: the certificate for signing test apps against the *single-app* mode (key store password, key password: 123456, key alias: key00).
